@@ -1,67 +1,67 @@
 <template>
     <v-form v-model="isValid">
-			<v-container style="max-width: 450px">
-				<v-card style="padding: 30px">
-					<v-row justify="center">
-						<v-col cols="12">
-							<h3>{{ signUp ? 'Create a new account' : 'Sign in with Email'}}</h3>
-						</v-col>
-						<v-col><v-divider/></v-col>
-					</v-row>
-					<v-row>
-						<v-col>
-						<label hidden for="email"><b>Email</b></label>
-						<v-text-field
-						label="Email"
-						v-model="email"
-						:rules="[v => v === undefined || /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid']"
-						hide-details="auto"
-						></v-text-field>
-						</v-col>
-					</v-row>
-					<v-row>
-						<v-col>
-						<label hidden for="password"><b>Password</b></label>
-						<v-text-field
-						label="Password"
-						type="password"
-						v-model="password"
-						:rules="[ v => !!v || 'Password Required']"
-						hide-details="auto"
-						></v-text-field>
-						</v-col>
+		<v-container style="max-width: 450px">
+			<v-card style="padding: 30px">
+				<v-row justify="center">
+					<v-col cols="12">
+						<h3>{{ signUp ? 'Create a new account' : 'Sign in with Email'}}</h3>
+					</v-col>
+					<v-col><v-divider/></v-col>
+				</v-row>
+				<v-row>
+					<v-col>
+					<label hidden for="email"><b>Email</b></label>
+					<v-text-field
+					label="Email"
+					v-model="email"
+					:rules="[v => v === undefined || /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid']"
+					hide-details="auto"
+					></v-text-field>
+					</v-col>
+				</v-row>
+				<v-row>
+					<v-col>
+					<label hidden for="password"><b>Password</b></label>
+					<v-text-field
+					label="Password"
+					type="password"
+					v-model="password"
+					:rules="[ v => !!v || 'Password Required']"
+					hide-details="auto"
+					></v-text-field>
+					</v-col>
 
-					</v-row>
+				</v-row>
 
-					<v-row>
-						<v-col cols="12">
-							<v-btn color="deep-purple" :disabled="!isValid" dark @click="handleAuthRequest()">{{ signUp ? 'Sign Up' : 'Login'}}</v-btn>
-						</v-col>
-						<v-col cols="12">
-							<a href='#' @click="signUp = !signUp">{{ signUp ? 'Already have an account? Sign in' : 'Don\'t have an account? Sign up now'}}</a>
-						</v-col>
-					</v-row>
+				<v-row>
+					<v-col cols="12">
+						<v-btn color="deep-purple" :disabled="!isValid" dark @click="handleAuthRequest()">{{ signUp ? 'Sign Up' : 'Login'}}</v-btn>
+					</v-col>
+					<v-col cols="12">
+						<a href='#' @click="signUp = !signUp">{{ signUp ? 'Already have an account? Sign in' : 'Don\'t have an account? Sign up now'}}</a>
+					</v-col>
+				</v-row>
 
-					<v-row justify="center">
-						<v-col>
-							<v-label>OR</v-label>
-						</v-col>
-					</v-row>
+				<v-row justify="center">
+					<v-col>
+						<v-label>OR</v-label>
+					</v-col>
+				</v-row>
 
-					<v-row >
-						<v-col cols="3"/>
-						<v-col cols="6">
-							<v-img
-							:src="require('../assets/google-sign-in-btn.png')"
-							style="cursor: pointer"
-							@click="handleSocialAuthRequest()"
-							contain
-							/>
-						</v-col>
-					</v-row>
-				</v-card>
-			</v-container>
-		</v-form>
+				<v-row >
+					<v-col cols="3"/>
+					<v-col cols="6">
+						<v-img
+						:src="require('../assets/google-sign-in-btn.png')"
+						style="cursor: pointer"
+						@click="handleSocialAuthRequest()"
+						contain
+						/>
+					</v-col>
+				</v-row>
+			</v-card>
+		</v-container>
+	</v-form>
 </template>
 
 <script>
