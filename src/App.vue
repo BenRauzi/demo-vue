@@ -7,7 +7,7 @@
     </v-app>
 </template>
 
-<style lang="scss">
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -16,8 +16,16 @@
   color: #2c3e50;
 }
 
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 body {
-	padding: 0
+	padding: 0;
+	overflow: hidden !important;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
 }
 
 .v-btn--disabled {
