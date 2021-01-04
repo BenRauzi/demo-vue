@@ -12,10 +12,19 @@ const routes = [
 		component: Home
 	},
 	{
-		path: '/about',
-		name: 'About',
+		path: '/dashboard',
+		name: 'Dashboard',
 
-		component: () => import('../views/About.vue'),
+		component: () => import('../views/Dashboard.vue'),
+		meta: {
+			requiresAuth: true
+		}
+	},
+	{
+		path: '/profile',
+		name: 'Profile',
+
+		component: () => import('../views/Profile.vue'),
 		meta: {
 			requiresAuth: true
 		}
@@ -30,7 +39,7 @@ const routes = [
 			const userData = store.getters.user.data
 			if (!userData) return next()
 			next({
-				name: 'About'
+				name: 'Profile'
 			})
 		}
 	}

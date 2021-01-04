@@ -1,9 +1,30 @@
 <template>
-  <div class="profile">
-	<ProfileForm v-if="this.profile !== null" :profile="this.profile"/>
+  <div class="home">
+    <h1>User Dashboard</h1>
+
+	<div class="force-profile-background" v-if="this.profile === undefined" >
+		<div class="force-profile">
+			<ProfileForm v-bind:profile="this.profile" />
+		</div>
+	</div>
+
   </div>
 </template>
 
+<style>
+.force-profile-background {
+	position: fixed;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background-color: rgba(1,1,1, 0.8);
+	z-index: 5;
+}
+.force-profile {
+	position: fixed;
+	margin: auto;
+	height: 600px;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+</style>
 <script>
 import { mapGetters } from 'vuex'
 import { db } from '../firebase'
