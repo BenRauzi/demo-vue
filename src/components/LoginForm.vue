@@ -10,7 +10,6 @@
 				</v-row>
 				<v-row>
 					<v-col>
-					<label hidden for="email"><b>Email</b></label>
 					<v-text-field
 					label="Email"
 					v-model="email"
@@ -21,7 +20,6 @@
 				</v-row>
 				<v-row>
 					<v-col>
-					<label hidden for="password"><b>Password</b></label>
 					<v-text-field
 					label="Password"
 					type="password"

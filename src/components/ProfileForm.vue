@@ -10,7 +10,6 @@
 					<v-col
 						cols="12"
 						sm="6">
-						<label hidden for="firstName"><b>First Name</b></label>
 						<v-text-field
 						label="First Name"
 						v-model="firstName"
@@ -21,7 +20,6 @@
 					<v-col
 						cols="12"
 						sm="6">
-						<label hidden for="lastName"><b>Last Name</b></label>
 						<v-text-field
 						label="Last Name"
 						v-model="lastName"
@@ -33,7 +31,6 @@
 				<v-row>
 					<v-col
 					cols="12">
-						<label hidden for="dateOfBirth"><b>Date of Birth</b></label>
 						<v-text-field
 						label="Date of Birth"
 						type="date"
@@ -46,7 +43,6 @@
 
 				<v-row>
 					<v-col>
-						<label hidden for="mobile"><b>Mobile Number</b></label>
 						<v-text-field
 						label="Mobile Number"
 						v-model="mobile"
@@ -69,8 +65,6 @@
 					<v-col
 					cols="12"
 					sm="6">
-						<label hidden for="emergencyFirst"><b>Emergency Contact First Name</b></label>
-
 						<v-text-field
 						label="Emergency Contact First Name"
 						v-model="emergencyContact.firstName"
@@ -81,7 +75,6 @@
 					<v-col
 					cols="12"
 					sm="6">
-						<label hidden for="emergencyLast"><b>Emergency Contact Last Name</b></label>
 						<v-text-field
 						label="Emergency Contact Last Name"
 						v-model="emergencyContact.lastName"
@@ -93,7 +86,6 @@
 
 				<v-row>
 					<v-col cols="12">
-						<label hidden for="emergencyMobile"><b>Emergency Contact Mobile Number</b></label>
 						<v-text-field
 						label="Emergency Contact Mobile Number"
 						v-model="emergencyContact.mobile"
