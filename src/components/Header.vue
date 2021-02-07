@@ -98,7 +98,7 @@ export default {
 	data: () => ({
 		drawer: false,
 		group: null,
-		appName: 'Atom Timing',
+		appName: 'Atom Demo',
 		navItems: [
 			{ title: 'Home', path: '/', icon: 'mdi-home', requireLogin: false },
 			{ title: 'Profile', path: '/profile', icon: 'mdi-account', requireLogin: true }
