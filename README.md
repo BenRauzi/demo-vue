@@ -1,4 +1,6 @@
-# atom-timing-demo
+# demo-vue 
+
+Simple code test: "Create a Vue.js SPA that authenticates and allows registration against Google Firebase, with the ability to store user profile information in Firestore. As an addition I have also allowed this to work with Google OAuth authentication"
 
 ## Project setup
 ```
